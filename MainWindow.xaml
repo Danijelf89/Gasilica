@@ -9,7 +9,7 @@
         WindowStartupLocation="CenterScreen"
         Title="Gasilica" 
         SizeToContent="Height"
-        Icon="/shutdown.png"
+        Icon="/shutdown_off_close_exit_15253.ico"
         Width="500"
         ResizeMode="NoResize"
         Style="{StaticResource MaterialDesignWindow}">
