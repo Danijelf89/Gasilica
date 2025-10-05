@@ -1,0 +1,88 @@
+# Build results
+bin/
+obj/
+out/
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Mono Auto Generated Files
+mono_crash.*
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Visual Studio Code
+.vscode/
+
+# Rider IDE
+.idea/
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Logs
+*.log
+
+# Compiled DLLs and EXEs
+*.dll
+*.exe
+
+# BAML (Binary Application Markup Language)
+*.baml
+
+# NuGet packages
+*.nupkg
+packages/
+*.snupkg
+
+# Backup & temporary files
+*~
+*.bak
+*.tmp
+*.temp
+*.vsidx
+*.db
+*.v2
+.vs*/
+
+# Publish output
+publish/
+AppPackages/
+*.appx
+*.appxbundle
+
+# DotCover
+*.dotCover
+
+# JetBrains Rider
+.idea/
+*.sln.iml
+
+# Git directory
+.git/
+
+# Ignore test results
+TestResults/
+
+# Ignore coverage reports
+coverage/
+*.coverage
+*.coveragexml
+
+# Ignore database files
+*.mdf
+*.ldf
+
+# Node.js (ako koristiš frontend deo sa npm-om)
+node_modules/
