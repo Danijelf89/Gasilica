@@ -32,17 +32,16 @@ namespace Gasilica.ViewModels
             }
             set
             {
-                //if (string.IsNullOrEmpty(value))
-                //{
-                //    _hours = "0";
-                //}
+                if (string.IsNullOrEmpty(value))
+                {
+                    ConvertedHours = 0;
+                }
 
-                //else
-                //{
-                    _hours = value;
-                //}
+               
+                _hours = value;
+                
                 OnPropertyChanged();
-                OnPropertyChanged("Minutes");
+                OnPropertyChanged(nameof(Minutes));
 
                 if (int.TryParse(Hours.ToString(), out int parsed))
                 {
@@ -90,16 +89,15 @@ namespace Gasilica.ViewModels
             }
             set
             {
-                //if(string.IsNullOrEmpty(value))
-                //{
-                //    _minutes = "0";
-                //}
+                if (string.IsNullOrEmpty(value))
+                {
+                    ConvertedMinutes = 0;
+                }
 
-                //else
-                //{
-                    _minutes = value;
-                //}
-               
+                
+                _minutes = value;
+                
+             
 
                 if (int.TryParse(Minutes.ToString(), out int parsed))
                 {
@@ -107,7 +105,7 @@ namespace Gasilica.ViewModels
                 }
 
                 OnPropertyChanged();
-                OnPropertyChanged("Hours");
+                OnPropertyChanged(nameof(Hours));
             }
         }
 
@@ -201,8 +199,10 @@ namespace Gasilica.ViewModels
             // Sada ažuriraj UI na main threadu
             _window.Dispatcher.Invoke(() =>
             {
+                int totalHours = (int)remainingTime.TotalHours;
+
                 _window.OdborjavanjeTxt.Text = string.Format("{0:D2}:{1:D2}:{2:D2}",
-                    remainingTime.Hours, remainingTime.Minutes, remainingTime.Seconds);
+                    totalHours, remainingTime.Minutes, remainingTime.Seconds);
 
                 // Menjaj boju teksta ako je manje od 30 sekundi
                 if (remainingTime.TotalSeconds <= 30)
